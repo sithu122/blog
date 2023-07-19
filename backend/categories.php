@@ -55,7 +55,7 @@
                                         ?>
                                         <tr>
                                             <td><?= $category['name']?></td>
-                                            <td><a href="edit_category.php?id=<?=$category['id']?>" class="btn btn-warning mx-3 w-25">Edit</a>
+                                            <td><a href="category_edit.php?id=<?=$category['id']?>" class="btn btn-warning mx-3 w-25">Edit</a>
                                             <a class="btn btn-danger w-25 delete" data-id="<?=$category['id']?>">Dele</a></td>
                                         </tr>
                                     <?php 

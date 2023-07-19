@@ -32,7 +32,7 @@
                     <label for="name" class="form-label">Category Name</label>
                     <input type="text" class="form-control" id="cate_name" name="cate_name">
                 </div>
-                 <button class="btn btn-primary w-100 mt-3 " type="submit">Update</button>
+                 <button class="btn btn-primary w-100 mt-3 " type="submit">Sumbit</button>
             </form>
         </div>
     </div>

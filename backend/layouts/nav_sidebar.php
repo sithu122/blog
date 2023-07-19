@@ -1,6 +1,10 @@
 <?php 
-session_start();
+ session_start();
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,8 +19,8 @@ session_start();
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- summer note -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -37,6 +41,7 @@ session_start();
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!"><?= $_SESSION['name'] ?></a></li>
+                        <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
@@ -49,24 +54,32 @@ session_start();
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            
+                            <div class="sb-sidenav-menu-heading">ADDONS</div>
                             <a class="nav-link" href="posts.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-list-alt"></i></div>
-                                Posts
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-rectangle-list"></i></div>
+                                Post
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="tables.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
+                            </a>
+                            <a class="nav-link" href="users.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
+                                User
+                            </a>
+                            <a class="nav-link" href="categories.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-barcode"></i></div>
+                                Category
                             </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Logged in as: <?= $_SESSION['name']?></div>
                     </div>
                 </nav>
             </div>
